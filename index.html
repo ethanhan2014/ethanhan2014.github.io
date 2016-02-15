@@ -1,18 +1,34 @@
 ---
 layout: default
+title: Home
 ---
 
-<div class="posts">
+<div class="home">
+
   {% for post in site.posts %}
-    <article class="post">
-
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
-
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
+    <ui-view layout='column' layout-fill layout-padding>
+        <div class="inset" hide-sm></div>
+        <md-card flex-xs flex-gt-sm="90" flex-gt-md="80" >
+          <!-- <img src="http://www.planwallpaper.com/static/images/i-should-buy-a-boat.jpg" class="md-card-image" alt="Washed Out" class="md-card-image"/> -->
+          <md-card-title>
+                  <md-card-title-text>
+                  <a href="{{ post.url }}">
+                    <span class="md-headline">{{ post.title }}</span></a>
+                    <span class="md-subheader">{{ post.date | date: "%b %-d, %Y" }}</span>
+                  </md-card-title-text>
+              </md-card-title>
+              <md-divider></md-divider>
+                    <md-card-content>
+                    <p>{{ post.excerpt }}</p>
+                    </md-card-content>
+                    <md-card-actions layout="row" layout-align="end center">
+                  <md-button href="{{ post.url }}">Read</md-button>
+                  <md-button href="https://twitter.com/intent/tweet?text=Share">Share</md-button>
+              </md-card-actions>
+                </md-card>
+      </ui-view>
   {% endfor %}
+
+  <!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p> -->
+
 </div>

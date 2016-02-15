@@ -1,0 +1,37 @@
+<meta charset="utf-8" />
+<meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'> {% if page.excerpt %}
+<meta name="description" content="{{ page.excerpt| strip_html }}" />
+<meta property="og:description" content="{{ page.excerpt| strip_html }}" /> {% else %}
+<meta name="description" content="{{ site.description }}">
+<meta property="og:description" content="{{ site.description }}" /> {% endif %}
+<meta name="author" content="{{ site.name }}" /> {% if page.title %}
+<meta property="og:title" content="{{ page.title }}" />
+<meta property="twitter:title" content="{{ page.title }}" /> {% endif %}
+<!-- Angular Material -->
+<link rel="stylesheet" href="/css/angular-material.min.css">
+<!-- fonts -->
+<link href='/css/roboto-fontface.css'>
+<!-- icons -->
+<link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.css' rel='stylesheet' type='text/css'>
+<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+<style type="text/css" media="screen">
+.md-avatar {
+    width: 192px;
+    margin: 16px;
+    border-radius: 128px;
+    border: 1px solid #ddd;
+}
+
+.s32 {
+    font-size: 28px;
+}
+
+a {
+    color: $darkGray;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+</style>

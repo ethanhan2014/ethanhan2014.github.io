@@ -1,12 +1,24 @@
 ---
 layout: default
+title: Home
 ---
-
-<article class="page">
-
-  <h1>{{ page.title }}</h1>
-
-  <div class="entry">
-    {{ content }}
-  </div>
-</article>
+<ui-view layout='column' layout-fill layout-padding>
+				<div class="inset" hide-sm></div>
+				<md-card flex-xs flex-gt-sm="90" flex-gt-md="80">
+					<!-- <img src="http://www.planwallpaper.com/static/images/i-should-buy-a-boat.jpg" class="md-card-image" alt="Washed Out" class="md-card-image"/> -->
+					<md-card-title>
+          				<md-card-title-text>
+            				<span class="md-headline">{{ page.title }}</span>
+            				<span class="md-subheader">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</span>
+          				</md-card-title-text>
+        			</md-card-title>
+        			<md-divider></md-divider>
+                    <md-card-content>
+                    <p>{{ content }}</p>
+                    </md-card-content>
+                    <md-card-actions layout="row" layout-align="end center">
+          				<md-button>Read</md-button>
+          				<md-button>Share</md-button>
+        			</md-card-actions>
+                </md-card>
+			</ui-view>

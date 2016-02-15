@@ -1,0 +1,33 @@
+<md-sidenav class="md-sidenav-left md-whiteframe-12dp" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')">
+      <!--3. Side toolbar-->
+      <md-toolbar class="md-hue-2" layout="row" layout-align="center center">
+
+        <a href="/"> <img class="md-avatar" src={{site.avatar}}/></a>
+        
+      </md-toolbar>
+      
+      <!--3. Self Description-->
+      <md-content class="md-padding" layout="column" layout-fill>
+              <p>Hello World. this is my blog. Welcome. 欢迎.</p>
+
+      </md-content>
+
+<!--       <md-list>
+        <md-item ng-repeat='item in menu'>
+          
+          {{item.title}}
+        </md-item>
+      </md-list> -->
+      
+      <md-divider></md-divider>
+
+      <!--3. List of useful links-->
+      <section layout="row" layout-align="center center" layout-wrap >
+        
+        <md-button aria-label="[[so.name]]" class="md-fab md-raised" ng-repeat="so in socials" href="[[so.url]]">
+            <md-tooltip>[[so.name]]</md-tooltip>
+            <md-icon md-font-icon="[[so.icon]]" class="fa s32" style="color:#090;" ></md-icon>
+        </md-button>
+
+      </section>
+    </md-sidenav>

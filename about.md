@@ -2,9 +2,7 @@
 layout: page
 title: About
 permalink: /about/
-published: true
 ---
-
 
 Hello World! My name is Ziyi Han, a programming enthusiast from China. 
 
