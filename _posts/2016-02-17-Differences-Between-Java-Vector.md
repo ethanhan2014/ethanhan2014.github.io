@@ -27,10 +27,10 @@ As it's mentioned in ArrayList API doc, ArrayList class is similar to Vector cla
   List list = Collections.synchronizedList(new ArrayList(...));
 ~~~
 
-###2. Performance.
+### 2. Performance.
 ArrayList has better performance since it is non-synchronized.
 
-###3. Storage Management
+### 3. Storage Management
 In order to optimize storage management, each vector maintain capacity and capacityIncrement. Each arraylist only has capacity and it grows automatically. 
 
 But how they grow ?
@@ -47,7 +47,7 @@ As for Vector, if you specified capacityIncrement, it will grow by the number yo
   int newCapacity = oldCapacity + ((capacityIncrement > 0) ? capacityIncrement : oldCapacity);
 ~~~
 
-###4. Fail-fast behavior
+### 4. Fail-fast behavior
 First, what is fail-fast ?
 
 see [java doc](https://docs.oracle.com/javase/7/docs/api/java/util/Vector.html#fail-fast)
